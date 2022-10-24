@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  border: 5px solid black;
+  padding: 50px;
+  margin-top: 35vh;
+  width: 30%;
+}
+
+.wrapper button {
+  padding: 30px;
+}
