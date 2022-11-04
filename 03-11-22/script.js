@@ -14,7 +14,7 @@ const plans = [
       quantity: 100,
       type: "GB",
     },
-    sells: 10,
+    sells: 100,
   },
   {
     category: "Business",
