@@ -62,6 +62,7 @@ const createCard = (plan, special) => {
 
   const card_headEl = document.createElement("div");
   card_headEl.classList.add("card__head");
+  const ribbonEl = document.createElement("span");
   const categoryEl = document.createElement("h2");
   const priceEl = document.createElement("h2");
   const descEl = document.createElement("p");
@@ -90,7 +91,8 @@ const createCard = (plan, special) => {
 
   cardsContainerEl.append(cardEl);
   cardEl.append(card_headEl, card_bodyEl, buttonEl);
-  card_headEl.append(categoryEl, priceEl, descEl);
+  if (special) card_headEl.append(ribbonEl, categoryEl, priceEl, descEl);
+  else card_headEl.append(categoryEl, priceEl, descEl);
   card_bodyEl.append(
     storageEl,
     domineEl,
