@@ -54,6 +54,11 @@ const plans = [
 
 const bodyEl = document.querySelector("body");
 const cardsContainerEl = document.querySelector(".cards_container");
+const login_buttonEl = document.querySelector(".login__button");
+const login_modalEl = document.querySelector(".login__modal");
+const close_login_modal__btn = document.querySelector(
+  ".close_login_modal__btn"
+);
 
 const createCard = (plan, special) => {
   const cardEl = document.createElement("div");
@@ -120,3 +125,16 @@ plans.forEach((plan) => {
   if (plan === best_seller_plan) createCard(plan, true);
   else createCard(plan, false);
 });
+
+const showLoginModal = () => {
+  login_modalEl.style = "display: flex";
+  bodyEl.style = "position: fixed; overflow-y: scroll;";
+};
+
+const hideLoginModal = () => {
+  login_modalEl.style = "display: none";
+  bodyEl.style = "position: static;";
+};
+
+login_buttonEl.addEventListener("click", (event) => showLoginModal());
+close_login_modal__btn.addEventListener("click", (event) => hideLoginModal());
