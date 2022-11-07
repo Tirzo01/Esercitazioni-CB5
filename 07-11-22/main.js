@@ -22,10 +22,3 @@ fetch("https://jsonplaceholder.typicode.com/todos")
   })
   .catch((error) => console.error("Fertch error."))
   .finally((f) => console.log("Done!"));
-
-// users.forEach((user) => {
-//   console.log(user);
-//   //   console.log("name: " + user.name);
-//   //   console.log("address: " + user.address);
-//   //   console.log("city: " + user.city);
-// });
