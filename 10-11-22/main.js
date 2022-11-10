@@ -5,6 +5,10 @@ const idEl = containerEl.querySelector(".id");
 
 const urlAdvice = "https://api.adviceslip.com/advice";
 
+/**
+ * Funzione che restituisce un oggetto slip con id e advice
+ * @param {string} url
+ */
 const getAdvice = (url) => {
   return fetch(url, { cache: "no-cache" }).then((res) =>
     res.json().then((data) => {
