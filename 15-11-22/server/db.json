@@ -1,0 +1,24 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Bulbasarur",
+      "type": "grass"
+    },
+    {
+      "id": "56616fde-2789-4efa-90aa-74b866662823",
+      "name": "pikachu",
+      "type": "electric"
+    },
+    {
+      "id": "0fcc1884-ffd9-4018-8fb0-563507cef3f7",
+      "name": "Prova",
+      "type": "tipo"
+    },
+    {
+      "id": "d2e0c597-288d-4a16-9379-2198b89a7734",
+      "name": "prova1",
+      "type": "prova1"
+    }
+  ]
+}
