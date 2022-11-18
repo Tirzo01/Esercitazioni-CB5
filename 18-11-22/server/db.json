@@ -1,0 +1,19 @@
+{
+  "pokemon": [
+    {
+      "id": "48b035d3-c43e-45ab-b589-dd9452043001",
+      "name": "Bulbasaur",
+      "type": "acqua"
+    },
+    {
+      "id": "06501af3-337a-4aec-ade0-f19005019cd7",
+      "name": "Prova",
+      "type": "123"
+    },
+    {
+      "id": "c744cc55-67c9-46b9-a5f2-c7051f1527b8",
+      "name": "Picka",
+      "type": "ciao"
+    }
+  ]
+}
