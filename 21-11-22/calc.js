@@ -60,6 +60,10 @@ switch (op.toLowerCase()) {
     console.log("Il risultato e': " + MathLibrary.mul(...numbers));
     break;
   case "divisione":
+    if (args[4] == 0) {
+      console.log("Impossibile dividere per 0");
+      return;
+    }
     console.log("Il risultato e': " + MathLibrary.dev(args[3], args[4]));
     break;
   default:
