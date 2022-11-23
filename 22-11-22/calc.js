@@ -34,38 +34,3 @@ module.exports = {
     return n * this.factorial(n - 1);
   },
 };
-
-/*let args = process.argv;
-let op = args[2];
-let numbers = [];
-
-for (number of args.slice(3)) {
-  let n = parseInt(number);
-  if (!isNaN(number)) {
-    numbers.push(n);
-  } else {
-    console.log("Errore: Argomenti non validi.");
-    return;
-  }
-}
-
-switch (op.toLowerCase()) {
-  case "addizione":
-    console.log("Il risultato e': " + MathLibrary.sum(...numbers));
-    break;
-  case "sottrazione":
-    console.log("Il risultato e': " + MathLibrary.sub(args[3], args[4]));
-    break;
-  case "moltiplicazione":
-    console.log("Il risultato e': " + MathLibrary.mul(...numbers));
-    break;
-  case "divisione":
-    if (args[4] == 0) {
-      console.log("Impossibile dividere per 0");
-      return;
-    }
-    console.log("Il risultato e': " + MathLibrary.dev(args[3], args[4]));
-    break;
-  default:
-    console.log("Errore: Nessuna operazione specificata.");
-}*/
