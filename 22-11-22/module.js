@@ -12,11 +12,20 @@ const url = require("url");
 const http = require("http");
 //req è la richiesta che ricevo dal browser
 //res è la risposta alla chiamata
+
+const calcPage =
+  '<form method="GET"><input type="textbox" name="a"><br /><input type="textbox" name="b"><br /><input type="submit" value="Calcola"></form>';
+
+const homePage =
+  '<h1> Scegli operazione </h1> <a href="/sum"> Somma </a> <br /> <a href="/sub"> Sottrazione </a> <br/> <a href="/mul"> Moltiplicazione </a> <br /> <a href="/dev"> Divisione </a>';
+
 const server = http.createServer((req, res) => {
   const params = url.parse(req.url, true).query;
   const my_url = url.parse(req.url, true).pathname;
 
-  console.log(params);
+  res.writeHead(200, { "Content-Type": "text/html" });
+
+  /*VERIFICA CHE I PARAMETRI SIANO TUTTI NUMERI INTERI */
   for (key in params) {
     if (isNaN(params[key])) {
       res.end("Errore: Numero non valido");
@@ -26,26 +35,44 @@ const server = http.createServer((req, res) => {
 
   switch (my_url) {
     case "/home":
-      res.write("Benvenuti nella home");
+      res.write(homePage);
       break;
     case "/sum":
-      let sum = MathLibrary.sum(...Object.values(params));
-      res.write("La somma e': " + sum);
+      if (Object.values(params).length >= 2) {
+        let sum = MathLibrary.sum(...Object.values(params));
+        res.write("La somma e': " + sum);
+      } else {
+        res.write(calcPage);
+      }
       break;
     case "/sub":
-      let sub = MathLibrary.sub(params.a, params.b);
-      res.write("La sottrazione e': " + sub);
+      if (Object.values(params).length >= 2) {
+        let sub = MathLibrary.sub(params.a, params.b);
+        res.write("La sottrazione e': " + sub);
+      } else {
+        res.write(calcPage);
+      }
       break;
     case "/mul":
-      let mul = MathLibrary.mul(...Object.values(params));
-      res.write("La moltiplicazione e': " + mul);
+      if (Object.values(params).length >= 2) {
+        let mul = MathLibrary.mul(...Object.values(params));
+        res.write("La moltiplicazione e': " + mul);
+      } else {
+        res.write(calcPage);
+      }
       break;
     case "/dev":
-      let dev = MathLibrary.dev(params.a, params.b);
-      res.write("La divisione e': " + dev);
+      if (Object.values(params).length >= 2) {
+        let dev = MathLibrary.dev(params.a, params.b);
+        res.write("La divisione e': " + dev);
+      } else {
+        res.write(calcPage);
+      }
       break;
     default:
-      "<h1>Ahi ahi ahi</h1><p>La pagina non esiste, torna alla <a href='/home'>Home<a></p>";
+      res.write(
+        "<h1>Ahi ahi ahi</h1><p>La pagina non esiste, torna alla <a href='/home'>Home</a></p>"
+      );
       break;
   }
   res.end();
