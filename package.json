@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "os": "^0.1.2"
-  }
+  },
+  "name": "calcolatrice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tirzo01/Esercitazioni-CB5.git"
+  },
+  "author": "Io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tirzo01/Esercitazioni-CB5/issues"
+  },
+  "homepage": "https://github.com/Tirzo01/Esercitazioni-CB5#readme",
+  "description": ""
 }
