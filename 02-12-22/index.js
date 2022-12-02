@@ -5,10 +5,11 @@ const fs = require("fs");
 // istanza express
 const app = express();
 
-// const provaRouting = require("./src/routing.js");
-
 // apertura cartella public
 app.use(express.static("public"));
+
+let username;
+let password;
 
 // urlencoded per leggere i parametri post
 app.use(express.urlencoded({ extended: false }));
@@ -19,7 +20,7 @@ const middlewareProva = (req, res, next) => {
   next();
 };
 
-app.use("/attori", middlewareProva, (req, res) => {});
+app.use(middlewareProva);
 
 app.listen(3000, () => {
   console.log("Server in esecuzione sulla porta 3000!");
