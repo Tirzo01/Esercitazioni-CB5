@@ -8,9 +8,6 @@ const app = express();
 // apertura cartella public
 app.use(express.static("public"));
 
-let username;
-let password;
-
 // urlencoded per leggere i parametri post
 app.use(express.urlencoded({ extended: false }));
 
