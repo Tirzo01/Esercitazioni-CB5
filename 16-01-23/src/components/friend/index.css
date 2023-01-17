@@ -1,0 +1,11 @@
+.Friend {
+}
+
+.Friend img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: rebeccapurple;
+  border: 3px solid lightgreen;
+  box-shadow: 0px 0px 5px 1px;
+}

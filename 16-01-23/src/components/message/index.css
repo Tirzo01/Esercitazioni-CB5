@@ -1,0 +1,30 @@
+.Message {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.Message img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: rebeccapurple;
+  margin: 0;
+}
+
+.Message_Text-Profile {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.Message_Text-Profile-Name {
+  margin: 0;
+}
+
+.Message_Text-Profile-Username {
+  font-size: 0.8rem;
+  color: rgb(128, 128, 128);
+  margin: 0;
+}
