@@ -1,4 +1,10 @@
 .Friend {
+  transition: transform 0.3s;
+}
+
+.Friend:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
 }
 
 .Friend img {
@@ -8,4 +14,5 @@
   background-color: rebeccapurple;
   border: 3px solid lightgreen;
   box-shadow: 0px 0px 5px 1px;
+  cursor: pointer;
 }

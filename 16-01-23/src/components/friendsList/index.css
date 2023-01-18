@@ -1,4 +1,60 @@
+.FriendListContainer {
+  position: relative;
+  /* max-width: 800px; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .FriendList {
   display: flex;
+  align-items: center;
   gap: 30px;
+  padding: 10px 10px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* max-width: 800px; */
+}
+
+.prevFriendList {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  outline: none;
+  position: absolute;
+  z-index: 10;
+  left: 1%;
+  top: 28%;
+  border: 1px solid gray;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.nextFriendList {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  z-index: 10;
+  right: 1%;
+  top: 28%;
+  border: 1px solid gray;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.prevFriendList:hover {
+  opacity: 100;
+  transition: opacity 0.2s;
+  font-weight: bold;
+}
+
+.nextFriendList:hover {
+  opacity: 100;
+  transition: opacity 0.2s;
+  font-weight: bold;
 }
