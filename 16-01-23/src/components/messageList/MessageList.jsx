@@ -10,6 +10,7 @@ export default function MessageList(props) {
 
   useEffect(() => {
     GET("posts").then(({ posts }) => {
+      console.log(posts);
       setPosts(posts);
       setFilteredPosts(posts);
     });
