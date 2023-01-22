@@ -13,7 +13,7 @@
 .content img {
   background-color: rebeccapurple;
   border-radius: 50%;
-  animation: appearContent 1s;
+  animation: appearContent 0.7s;
 }
 
 .overlay {
@@ -40,7 +40,7 @@
     transform: scale(0);
   }
   80% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);

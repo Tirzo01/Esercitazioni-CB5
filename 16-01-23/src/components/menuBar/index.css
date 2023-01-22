@@ -1,0 +1,70 @@
+.MenuBar {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  z-index: 20;
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.MenuBar ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0;
+}
+
+.MenuBar ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 20%;
+  cursor: pointer;
+  position: relative;
+}
+
+.MenuBar ul li:hover {
+  background-color: rgba(62, 86, 171, 0.582);
+}
+
+.MenuBar ul li img {
+  width: 30%;
+}
+
+.MenuBar ul li p {
+  margin: 0;
+  font-size: 0.6rem;
+}
+
+.notfications {
+  font-size: 0.6rem;
+  position: absolute;
+  top: -15%;
+  right: 10%;
+  background-color: rgb(237, 73, 86);
+  padding: 3px;
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .MenuBar {
+    width: auto;
+    height: 100vh;
+    bottom: auto;
+    position: fixed;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  .MenuBar ul {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .notfications {
+    top: -40%;
+  }
+}

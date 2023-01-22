@@ -1,20 +1,18 @@
 .FriendListContainer {
   position: relative;
-  /* max-width: 800px; */
   width: 100%;
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid rgba(187, 187, 187, 0.4);
 }
 
 .FriendList {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   padding: 10px 10px;
   width: 100%;
-  overflow-x: hidden;
   overflow-y: hidden;
-  /* max-width: 800px; */
 }
 
 .prevFriendList {
@@ -57,4 +55,10 @@
   opacity: 100;
   transition: opacity 0.2s;
   font-weight: bold;
+}
+
+@media screen and (min-width: 1000px) {
+  .FriendList {
+    overflow-x: hidden;
+  }
 }

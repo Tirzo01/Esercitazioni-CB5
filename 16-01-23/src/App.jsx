@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { FriendList } from "./components/friendsList/FriendList";
+import { MenuBar } from "./components/menuBar/MenuBar";
 import MessageList from "./components/messageList";
 import Modal from "./components/modal";
 
@@ -18,6 +19,7 @@ function App() {
           <img src={storyUrl} alt="" />
         </Modal>
       )}
+      <MenuBar />
       <div className="mainContainer">
         <FriendList onClickedFriend={onClickedFriend} />
         <MessageList />
