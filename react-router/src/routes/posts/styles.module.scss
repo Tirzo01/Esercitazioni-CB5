@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(115, 3, 131);
+  .card {
+    background-color: rgb(36, 32, 59);
+    color: rgb(164, 161, 190);
+    width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.6);
+    .avatar_container {
+      width: 150px;
+      img {
+        width: 100%;
+        border-radius: 100%;
+        background-color: white;
+      }
+    }
+  }
+}
