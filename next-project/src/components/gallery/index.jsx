@@ -7,12 +7,15 @@ export default function Gallery() {
   const gallery = useRef(null);
   const images = [
     {
+      id: 0,
       original: "https://picsum.photos/id/1018/1280/720/",
     },
     {
+      id: 1,
       original: "https://picsum.photos/id/1015/1280/720/",
     },
     {
+      id: 2,
       original: "https://picsum.photos/id/1019/1280/720/",
     },
   ];
@@ -37,7 +40,12 @@ export default function Gallery() {
     <div className={styles.main}>
       <div ref={gallery}>
         {images.map((image) => (
-          <Image src={image.original} width={1280} height={720} />
+          <Image
+            src={image.original}
+            width={1280}
+            height={720}
+            key={images.id}
+          />
         ))}
       </div>
       <button className={styles.prev} onClick={() => moveLeft()}>

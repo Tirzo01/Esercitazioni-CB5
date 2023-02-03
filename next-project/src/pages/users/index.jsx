@@ -1,10 +1,16 @@
 import { GET } from "@/http/http";
+import Link from "next/link";
+
+import styles from "./styles.module.scss";
 
 export default function Users({ users }) {
   return (
-    <div>
+    <div className={styles.main}>
       <h1>Pagina users</h1>
-      {users && users.map((user) => <p> {user.firstName}</p>)}
+      {users &&
+        users.map((user) => (
+          <Link href={"users/" + user.id}> {user.firstName}</Link>
+        ))}
     </div>
   );
 }
