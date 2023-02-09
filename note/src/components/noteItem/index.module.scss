@@ -1,0 +1,27 @@
+.main {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  color: rgb(118, 120, 127);
+  div {
+    position: relative;
+    button {
+      position: absolute;
+      top: 100%;
+      right: calc(0% - 15px);
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.5s;
+      img {
+        width: 100%;
+      }
+      &:hover {
+        transform: rotate(360deg) scale(1.5);
+        transition: transform 0.5s;
+      }
+    }
+  }
+}
